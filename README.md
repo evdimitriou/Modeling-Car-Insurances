@@ -1,6 +1,6 @@
 # Modeling Car Insurances
 
-This project involves building a predictive model to estimate the likelihood of a customer making a claim on their car insurance during the policy period. The project is commissioned by "On the Road" car insurance company, which seeks to optimize their pricing strategy and improve their risk assessment capabilities. Given the large market for car insurance, accurate prediction models are crucial for maintaining competitive advantage.
+This project involves building a predictive model to estimate the likelihood of a customer making a claim on their car insurance during the policy period. The project is commissioned by a fictional car insurance company, which seeks to optimize their pricing strategy and improve their risk assessment capabilities. Given the large market for car insurance, accurate prediction models are crucial for maintaining competitive advantage.
 
 ## Project Overview
 
