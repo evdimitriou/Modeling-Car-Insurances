@@ -41,4 +41,4 @@ The dataset contains the following columns:
 
 ## Conclusion
 
-The project successfully identifies the most predictive feature for car insurance claims, providing a simple yet effective model that "On the Road" can use to enhance their decision-making process. This approach allows the company to start with a straightforward model in production, minimizing the need for complex infrastructure and expertise.
+The project successfully identifies the most predictive feature for car insurance claims, providing a simple yet effective model that the insurance company can use to enhance their decision-making process. This approach allows the company to start with a straightforward model in production, minimizing the need for complex infrastructure and expertise.
