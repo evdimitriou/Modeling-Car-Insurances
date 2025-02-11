@@ -1,14 +1,12 @@
 # Modeling Car Insurances
 
-This project involves building a predictive model to estimate the likelihood of a customer making a claim on their car insurance during the policy period. The project is commissioned by a fictional car insurance company, which seeks to optimize their pricing strategy and improve their risk assessment capabilities. Given the large market for car insurance, accurate prediction models are crucial for maintaining competitive advantage.
+## Overview
 
-## Project Overview
+This project aims to develop a predictive model to estimate the likelihood of a customer making a claim on their car insurance during the policy period. Commissioned by a fictional car insurance company, the project seeks to optimize pricing strategies and enhance risk assessment capabilities, crucial for maintaining a competitive edge in the large car insurance market.
 
-The primary goal of this project is to identify the single most predictive feature from the provided customer dataset that can be used to predict whether a customer will make a claim. The dataset, `car_insurance.csv`, includes various customer attributes such as age, gender, driving experience, education, income, and more.
+## Dataset
 
-## Dataset Description
-
-The dataset contains the following columns:
+The dataset, `car_insurance.csv`, includes various customer attributes:
 
 - **id**: Unique client identifier
 - **age**: Client's age group
@@ -16,29 +14,44 @@ The dataset contains the following columns:
 - **driving_experience**: Years the client has been driving
 - **education**: Client's level of education
 - **income**: Client's income level
-- **credit_score**: Client's credit score (between zero and one)
-- **vehicle_ownership**: Client's vehicle ownership status
+- **credit_score**: Client's credit score (0 to 1)
+- **vehicle_ownership**: Ownership status
 - **vehicle_year**: Year of vehicle registration
-- **married**: Client's marital status
-- **children**: Number of children the client has
-- **postal_code**: Client's postal code
-- **annual_mileage**: Number of miles driven by the client each year
+- **married**: Marital status
+- **children**: Number of children
+- **postal_code**: Postal code
+- **annual_mileage**: Miles driven annually
 - **vehicle_type**: Type of car
-- **speeding_violations**: Total number of speeding violations received by the client
-- **duis**: Number of times the client has been caught driving under the influence
-- **past_accidents**: Total number of previous accidents the client has been involved in
-- **outcome**: Whether the client made a claim on their car insurance
+- **speeding_violations**: Number of violations
+- **duis**: Driving under influence incidents
+- **past_accidents**: Previous accidents
+- **outcome**: Claim status (0: No claim, 1: Claim)
 
 ## Methodology
 
-1. **Data Cleaning and Transformation**: The dataset is cleaned by handling missing values and transforming categorical variables into numerical representations.
+1. **Data Cleaning and Transformation**: Handled missing values and transformed categorical variables into numerical representations.
+   
+2. **Exploratory Data Analysis (EDA)**: Analyzed correlations and visualized data distributions to understand feature relationships.
 
-2. **Feature Selection**: Logistic regression models are applied to each feature individually to determine their predictive power regarding the outcome variable (claim or no claim).
+3. **Feature Selection**: Applied logistic regression to assess each feature's predictive power.
 
-3. **Accuracy Evaluation**: The accuracy of each model is calculated, and the feature with the highest accuracy is identified as the best predictor.
+4. **Modeling**: 
+   - **Logistic Regression**: Tuned using GridSearchCV, achieving an accuracy of 79%.
+   - **Random Forest**: Tuned with parameters `max_depth: None`, `min_samples_split: 2`, `n_estimators: 50`, achieving an accuracy of 82%.
 
-4. **Results**: The best feature and its corresponding accuracy are stored in a DataFrame for easy reference.
+5. **Evaluation**: Used confusion matrices and classification reports to evaluate model performance.
+
+## Results
+
+- **Best Feature**: `driving_experience` was identified as the most predictive feature with an accuracy of 77.71%.
+- **Model Performance**:
+  - Logistic Regression: Precision of 0.92 for "No Claim" and 0.63 for "Claim".
+  - Random Forest: Precision of 0.85 for "No Claim" and 0.70 for "Claim".
 
 ## Conclusion
 
-The project successfully identifies the most predictive feature for car insurance claims, providing a simple yet effective model that the insurance company can use to enhance their decision-making process. This approach allows the company to start with a straightforward model in production, minimizing the need for complex infrastructure and expertise.
+The project successfully identified key predictive features and developed models that enhance decision-making processes. The Random Forest model, with its higher accuracy, is recommended for deployment, providing a balance between simplicity and performance. This approach allows the company to start with a straightforward model in production, minimizing the need for complex infrastructure and expertise.
+
+## Visualizations
+
+Confusion matrices and correlation heatmaps are included to provide visual insights into model performance and feature relationships.
