@@ -4,7 +4,15 @@
 
 This project aims to develop a predictive model to estimate the likelihood of a customer making a claim on their car insurance during the policy period. Commissioned by a fictional car insurance company, the project seeks to optimize pricing strategies and enhance risk assessment capabilities, crucial for maintaining a competitive edge in the large car insurance market.
 
-## Dataset
+## Table of Contents
+- [Data Contents](#data-contents)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Visualizations](#visualizations)
+- [Conclusion](#conclusion)
+
+
+## Data Contents
 
 The dataset, `car_insurance.csv`, includes various customer attributes:
 
@@ -50,10 +58,23 @@ The dataset, `car_insurance.csv`, includes various customer attributes:
   - Logistic Regression: Precision of 0.92 for "No Claim" and 0.63 for "Claim".
   - Random Forest: Precision of 0.85 for "No Claim" and 0.70 for "Claim".
 
+## Visualizations
+
+Confusion matrices and correlation heatmaps are included to provide visual insights into model performance and feature relationships.
+
 ## Conclusion
 
 The project successfully identified key predictive features and developed models that enhance decision-making processes. The Random Forest model, with its higher accuracy, is recommended for deployment, providing a balance between simplicity and performance. This approach allows the company to start with a straightforward model in production, minimizing the need for complex infrastructure and expertise.
 
-## Visualizations
+## Getting Started
+To run this project, ensure you have the following libraries installed:
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
 
-Confusion matrices and correlation heatmaps are included to provide visual insights into model performance and feature relationships.
+Clone the repository and run the Jupyter Notebook to explore the analysis and predictions.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
